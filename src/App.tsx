@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useAppDispatch, useAppSelector } from './hooks/redux';
 import { fetchUsers } from './store/reducers/ActionCreators';
+import PostsList from './components/PostsList';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -14,9 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading && <h1>Идет загрузка...</h1>}
-      {error && <h1>{error}</h1>}
-      {JSON.stringify(users, null, 2)}
+      {/*{isLoading && <h1>Идет загрузка...</h1>}*/}
+      {/*{error && <h1>{error}</h1>}*/}
+      {/*{JSON.stringify(users, null, 2)}*/}
+      <PostsList />
     </div>
   );
 }
